@@ -30,5 +30,3 @@ def _filter_page(html):
 def get_recent():
     """Get "recent" tracks, this uses last.fm API.
        user.gettopartists"""
-
-    

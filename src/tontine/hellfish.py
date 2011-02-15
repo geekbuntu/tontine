@@ -57,7 +57,6 @@ def save_github_settings(username):
 
     settings = db.settings
     settings.insert(setting)
-    
 
 @route('/stats/:service')
 def stats():
