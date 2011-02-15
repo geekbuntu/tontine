@@ -34,9 +34,24 @@ def save_lastfm_settings(username):
 
     connection = Connection('localhost', 27017)
     db = connection.test_database
-    setting = {'username' : username,
+    setting = { 'connection' : 'lastfm',
+                'username' : username,
                 'created' : datetime.now(),
                 'request_url' : 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks'
+    }
+
+    settings = db.settings
+    settings.insert(setting)
+
+def save_github_settings(username):
+    """Save our connection details to our db."""
+
+    connection = Connection('localhost', 27017)
+    db = connection.test_database
+    setting = { 'connection' : 'github',
+                'username' : username,
+                'created' : datetime.now(),
+                'request_url' : 'http://github.com'
     }
 
     settings = db.settings
