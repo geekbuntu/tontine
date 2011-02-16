@@ -37,7 +37,7 @@ def save_lastfm_settings(username):
     setting = { 'connection' : 'lastfm',
                 'username' : username,
                 'created' : datetime.now(),
-                'request_url' : 'http://ws.audioscrobbler.com/2.0/'
+                'request_url' : 'http://ws.audioscrobbler.com/2.0/',
                 'api_key' : ''
               }
 
